@@ -1,0 +1,41 @@
+#-*- encoding:shift-jis -*-
+#ƒNƒ‰ƒX@”όμ‚³‚ρ
+class mikawa_kenichi:
+    def __init__(self,name,sign,gender,feel):
+        self.name = name
+        self.sign = sign
+        self.gender = gender
+        self.feel = feel
+#”όμ‚³‚ρ‚Μ’a¶(_”ι)
+mikawa = mikawa_kenichi("”όμ","‚³‚»‚θΐ",'—','•’Κ')
+
+
+#”όμ‚³‚ρ‚ª‰½ΐ‚Μ‰½‚Θ‚Μ‚©‚π•·‚Ά‚Δ‚έ‚ζ‚¤
+sign_list = ["‚¨‚Π‚Β‚¶ΐ", "‚¨‚¤‚µΐ", "‚Σ‚½‚²ΐ", "‚©‚Ιΐ", "‚µ‚µΐ", "‚¨‚Ζ‚ίΐ", "‚Δ‚ρ‚Ρ‚ρΐ", "‚³‚»‚θΐ", "‚Ά‚Δΐ", "‚β‚¬ΐ", "‚έ‚Έ‚ª‚ίΐ", "‚¤‚¨ΐ"]
+gender_list = ["’j","—"]
+
+def find_sign(mikawa,sign_list):
+    for i in range(len(sign_list)):
+        print(f"{sign_list[i]}ΐ‚Ε‚·‚©H")
+        if mikawa.sign == sign_list[i]:
+            print("θυ‚­")
+            mikawa.feel = "γ‹@™"
+            return sign_list[i]
+        else:
+            print("ρ‚πU‚ι")
+            mikawa.feel = "•s‹@™"
+        mikawa.feel = "β–]"
+
+def find_gender(mikawa,gender_list):
+    for i in range(len(gender_list)):
+        print(f"{mikawa.name}‚³‚ρ‚Ν{gender_list[i]}‚Ε‚·‚©H")
+        if mikawa.gender == gender_list[i]:
+            print("θυ‚­")
+            return gender_list[i]
+        else:
+            print("ρ‚πU‚ι")
+        mikawa.feel = "β–]"
+
+sign = find_sign(mikawa,sign_list)
+gender = find_gender(mikawa,gender_list)
+print(f"‚»‚¤‚ζ„‚Ν{sign}‚Μ{gender}`τ")
