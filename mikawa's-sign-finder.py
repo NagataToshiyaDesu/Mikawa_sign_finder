@@ -16,7 +16,7 @@ gender_list = ["男","女"]
 
 def find_sign(mikawa,sign_list):
     for i in range(len(sign_list)):
-        print(f"{sign_list[i]}座ですか？")
+        print(f"{sign_list[i]}ですか？")
         if mikawa.sign == sign_list[i]:
             print("頷く")
             mikawa.feel = "上機嫌"
